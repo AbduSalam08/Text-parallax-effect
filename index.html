@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Text Effect</title>
+    <!-- style -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- font monument extended -->
+    <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="smooth-scroll-wrapper">
+        <div class="content">
+            <div class="container">
+                <div class="image-container">
+                    <h2 class="text text-dark">
+                        <div class="parallax-text">
+                            Nothing is impossible.
+                        </div>
+                    </h2>
+                </div>
+                <h2 class="text">
+                    <div class="parallax-text">
+                        Nothing is impossible.
+                    </div>
+                </h2>
+            </div>
+            <img src="./parallax.jpg" alt="">
+            <h1>THE PARALLAX</h1>
+        </div>
+    </div>
+
+
+    <script>
+        let atScroll = false;
+        let parallaxText = document.querySelectorAll(".parallax-text");
+        let parallaxText2 = document.querySelector(".content > h1");
+
+        const scrollProgress = () => {
+            atScroll = true;
+        }
+
+        const raf = () => {
+            if (atScroll) {
+
+                parallaxText.forEach((e, i) => {
+                    e.style.transform = "translateX(" + window.scrollY / 8 + "%)";
+                })
+
+                parallaxText2.style.transform = "rotate(" + window.scrollY / -50 + "deg) translateX(" + window.scrollY / 50 + "%)";
+
+                atScroll = false;
+            }
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        window.addEventListener("scroll", scrollProgress);
+
+    </script>
+
+</body>
+
+</html>
