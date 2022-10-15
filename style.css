@@ -42,21 +42,25 @@ body{
     text-transform: uppercase;
     white-space: nowrap;
     letter-spacing: 4px;
+    font-family: "Monument Extended" !important;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
 }
 .text-dark{
     /* color: #fff; */
     color: #e669ba;
+    font-family: "Monument Extended" !important;
 }
 
 .text span{
     position: relative;
     display: block;
+    font-family: "Monument Extended" !important;
 }
 .content h1{
     color: #fff;
     font-size: 5vw;
     letter-spacing: 5px;
+    font-family: "Monument Extended" !important;
 }
 
 .content img{
@@ -64,5 +68,6 @@ body{
     top: 150%;
     left: 0;
     width: 100%;
-clip-path: polygon(100% 0, 100% 0, 100% 100%, 75% 100%, 0 100%, 0 28%);        filter: drop-shadow(0px -100px 10px rgba(0,0,0,0.9));
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 75% 100%, 0 100%, 0 28%);        
+    filter: drop-shadow(0px -100px 10px rgba(0,0,0,0.9));
 }
